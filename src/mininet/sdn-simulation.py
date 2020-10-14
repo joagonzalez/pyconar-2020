@@ -145,10 +145,11 @@ def qosSetup(test, switch, controllerUrl):
     api.post(ruleEndpoint, ruleData3)
 
 class MyTopo( Topo ):
-    "Test topology"
+    '''
+    Clase para definir topología a desplegar con Mininet
+    '''
 
     def build( self, **opts ):
-
         # add switches
         s1 = self.addSwitch( 's1' )
         s2 = self.addSwitch( 's2' )
@@ -165,6 +166,7 @@ class MyTopo( Topo ):
 def run():
 
     topo = MyTopo()
+    
     # Definimos controlador remoto (Ryu)
     controller = RemoteController( 'c0', ip='127.0.0.1', port=6633 )
     net = Mininet( topo=topo, controller=controller, autoSetMacs=True )

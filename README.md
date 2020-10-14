@@ -44,7 +44,8 @@ $ pip install -r requirements.txt
 ### Referencias
 - http://mininet.org/
 - https://ryu-sdn.org/
+- https://github.com/faucetsdn/ryu
 - https://www.opennetworking.org/
-- http://ccr.sigcomm.org/online/files/p69-v38n2n-mckeown.pdf
+- https://iperf.fr/ 
 
 
