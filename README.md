@@ -6,7 +6,7 @@
 ![Python](https://img.shields.io/badge/ovs-v2.13.0-orange)
 ![Python](https://img.shields.io/badge/ryuframework-4.34-blue)
 ![Python](https://img.shields.io/badge/python-v3.6-blue)
-![Python](https://img.shields.io/badge/platform-linux--64%7Cwin--64-lightgrey)
+![Python](https://img.shields.io/badge/platform-linux--64-lightgrey)
 
 **Abstract:**
 Las redes definidas por software (SDN) vienen a cambiar la forma en la que pensamos como las aplicaciones se vinculan con las redes sobre las que funcionan. En esta charla intentaré dar una breve introducción a la arquitectura y protocolos propuestos por SDN y como desarrollar nuevas funcionalidades de red usando un framework/controlador hecho en Python.
@@ -17,51 +17,34 @@ El objetivo de la charla es abordar los conceptos básicos de las redes definida
 **Tabla de contenido**
 
 - [Empezando](#empezando)
-- [Controlador](#sdn)
-  - [Arquitectura](#arquitectura)
-  - [Interfaces](#interfaces)
-  - [Aplicaciones](#aplicaciones)
-- [Mininet](#mininet)
-- [Despliegue](#deployment)
-  - [Building](#building)
-  - [Despliegue docker container](#despliegue-docker-container)
-  - [Despliegue docker-compose](#despliegue-docker-compose)
 - [Ejemplos](#ejemplos)
+    - [Switch L2](#switch-l2)
+    - [Calidad de servicio](#calidad-de-servicio)
 - [Referencias](#referencias)
 
 ### Requerimientos
 Además de los requerimientos del repositorio, será necesario contar mininet.
 
 ### Comenzando
-Clonar repositorio y (opcional) crear un virtualenv python para el manejo de dependencias
+Clonar repositorio y (opcional) crear un virtualenv+virtualenvwrapper python para el manejo de dependencias
 
 ```bash
-$ git clone git@github.com:newtech-sm/newcos-powershell-helper.git
+$ git clone https://github.com/joagonzalez/pyconar-2020
 $ mkproject pyconar-2020
 $ workon pyconar-2020
 $ pip install -r requirements.txt
 ```
-### Controlador
-
-#### Arquitectura
-
-#### Interfaces
-
-#### Aplicaciones
-
-### Mininet
-
-### Deployment
-
-#### Building
-
-#### Despliegue docker container
-
-#### Despliegue docker-compose
 
 ### Ejemplos
 
-### Referencias
+#### Switch L2
 
+#### Calidad de servicio
+
+### Referencias
+- http://mininet.org/
+- https://ryu-sdn.org/
+- https://www.opennetworking.org/
+- http://ccr.sigcomm.org/online/files/p69-v38n2n-mckeown.pdf
 
 
