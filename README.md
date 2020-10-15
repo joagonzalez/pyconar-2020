@@ -35,6 +35,22 @@ $ workon pyconar-2020
 $ pip install -r requirements.txt
 ```
 
+**Instalar Ryu**
+```baskh
+git clone https://github.com/faucetsdn/ryu.git
+cd ryu; pip install .
+```
+
+**Instalar Mininet**
+```bash
+git clone git://github.com/mininet/mininet
+cd mininet
+git tag  # list available versions
+git checkout -b 2.2.2
+cd ..
+mininet/util/install.sh [options]
+```
+
 ### Ejemplos
 
 #### Switch L2
