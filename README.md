@@ -54,8 +54,13 @@ mininet/util/install.sh [options]
 ### Ejemplos
 
 #### Switch L2
+Inicializar controlador
+Inicializar Mininet/GNS3
 
 #### Calidad de servicio
+Inicializar controlador
+Inicializar script
+![Figura 2](doc/pyconar-qos.png)
 
 ### Referencias
 - http://mininet.org/
