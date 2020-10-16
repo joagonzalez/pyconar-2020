@@ -8,7 +8,7 @@
 ![Python](https://img.shields.io/badge/python-v3.6-blue)
 ![Python](https://img.shields.io/badge/platform-linux--64-lightgrey)
 
-![Figura 1](doc/pyconar.png)
+![Figura 1](doc/pyconar.png) <!-- .element height="25%" width="25%" -->
 
 
 **Abstract:**
