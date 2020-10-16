@@ -8,8 +8,7 @@
 ![Python](https://img.shields.io/badge/python-v3.6-blue)
 ![Python](https://img.shields.io/badge/platform-linux--64-lightgrey)
 
-![Figura 1](doc/pyconar.png) <!-- .element height="25%" width="25%" -->
-
+![Figura 1](doc/pyconar-thumb.png) 
 
 **Abstract:**
 Las redes definidas por software (SDN) vienen a cambiar la forma en la que pensamos como las aplicaciones se vinculan con las redes sobre las que funcionan. En esta charla intentaré dar una breve introducción a la arquitectura y protocolos propuestos por SDN y como desarrollar nuevas funcionalidades de red usando un framework/controlador hecho en Python.
