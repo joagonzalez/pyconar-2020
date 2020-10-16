@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 27 33" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	.st0{fill:#4A77BC;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#3C63AE;}
+	.st3{fill:#FEDA00;}
+	.st4{fill:#FDB515;}
+</style>
+	<polygon class="st0" points="19 10 13 10 13 9 12 9 12 10 2 10 2 11 1 11 1 13 0 13 0 18 0 18 0 20 1 20 1 22 2 22 2 23 6 23 6 18 7 18 7 17 8 17 8 16 19 16 19 15 20 15 20 10"/>
+	<path class="st0" d="M21,3V2h-1V1h-1V0h-5v1h-1v1h-1v1h-1v2h1v2h1v1h2v1h3V8h2V7h1V5h1V3H21z"/>
+		<polygon class="st1" points="15 4 15 3 14 3 13 3 13 4 13 5 14 5 15 5"/>
+		<polygon class="st1" points="19 3 18 3 18 4 18 5 19 5 20 5 20 4 20 3"/>
+		<polygon class="st1" points="17 8 16 8 16 9 16 10 17 10 17 9"/>
+		<rect class="st1" x="15" y="10" width="1" height="1"/>
+		<rect class="st1" x="17" y="10" width="1" height="1"/>
+	<polygon class="st2" points="19 8 18 8 18 9 15 9 15 8 13 8 13 11 14 11 14 13 15 13 15 14 18 14 18 13 19 13 19 12 20 12 20 8"/>
+		<rect class="st1" x="15" y="10" width="1" height="1"/>
+		<rect class="st1" x="16" y="8" width="1" height="2"/>
+		<rect class="st1" x="17" y="10" width="1" height="1"/>
+		<rect class="st1" x="13" y="3" width="2" height="2"/>
+		<rect class="st1" x="18" y="3" width="2" height="2"/>
+	<polygon class="st3" points="8 23 14 23 14 24 15 24 15 23 25 23 25 22 26 22 26 20 27 20 27 15 27 15 27 13 26 13 26 11 25 11 25 10 21 10 21 15 20 15 20 16 19 16 19 17 8 17 8 18 7 18 7 23"/>
+	<path class="st3" d="M6,30v1h1v1h1v1h5v-1h1v-1h1v-1h1v-2h-1v-2h-1v-1h-2v-1H9v1H7v1H6v2H5v2H6z"/>
+		<polygon class="st4" points="12 29 12 30 13 30 14 30 14 29 14 28 13 28 12 28"/>
+		<polygon class="st4" points="8 30 9 30 9 29 9 28 8 28 7 28 7 29 7 30"/>
+		<polygon class="st4" points="10 25 11 25 11 24 11 23 10 23 10 24"/>
+		<rect class="st4" x="11" y="22" width="1" height="1"/>
+		<rect class="st4" x="9" y="22" width="1" height="1"/>
+	<polygon class="st4" points="8 25 9 25 9 24 12 24 12 25 14 25 14 22 13 22 13 20 12 20 12 19 9 19 9 20 8 20 8 21 7 21 7 25"/>
+		<rect class="st1" transform="matrix(-1 -1.2246e-16 1.2246e-16 -1 23 45)" x="11" y="22" width="1" height="1"/>
+		<rect class="st1" transform="matrix(-1 -1.2246e-16 1.2246e-16 -1 21 48)" x="10" y="23" width="1" height="2"/>
+		<rect class="st1" transform="matrix(-1 -1.2246e-16 1.2246e-16 -1 19 45)" x="9" y="22" width="1" height="1"/>
+		<rect class="st1" transform="matrix(-1 -1.2246e-16 1.2246e-16 -1 26 58)" x="12" y="28" width="2" height="2"/>
+		<rect class="st1" transform="matrix(-1 -1.2246e-16 1.2246e-16 -1 16 58)" x="7" y="28" width="2" height="2"/>
+</svg>

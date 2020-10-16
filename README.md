@@ -35,10 +35,13 @@ $ workon pyconar-2020
 $ pip install -r requirements.txt
 ```
 
-**Instalar Ryu**
+**Instalar controlador**
 ```baskh
 git clone https://github.com/faucetsdn/ryu.git
 cd ryu; pip install .
+
+sed '/OFPFlowMod(/,/)/s/)/, table_id=1)/' ryu/ryu/app/simple_switch_13.py > ryu/ryu/app/qos_simple_switch_13.py
+cd ryu; python setup.py install
 ```
 
 **Instalar Mininet**
@@ -54,13 +57,45 @@ mininet/util/install.sh [options]
 ### Ejemplos
 
 #### Switch L2
+![Figura 1](doc/topologia.png)
+
+Inicializar Mininet
+```
+sudo mn --topo=linear,3,1 --mac --switch ovsk --controller remote
+sudo mn --topo=tree,3,3 --mac --switch ovsk --controller remote
+```
+
+Verificar flujos
+```
+sudo ovs-vsctl show
+sudo ovs-ofctl dump-flows s1
+h1 ping h3
+wireshark &
+```
+
 Inicializar controlador
-Inicializar Mininet/GNS3
+
+```
+python3 ./bin/ryu-manager --observe-links ryu.app.rest_topology ryu.app.ws_topology ryu.app.ofctl_rest ryu.app.qos_simple_switch_13  ryu.app.rest_conf_switch ryu.app.rest_qos ryu.app.gui_topology.gui_topology
+```
 
 #### Calidad de servicio
-Inicializar controlador
-Inicializar script
+Se simularan 3 hilos de comunicación desde H2 (client) y hacia H1 (server) con IPerf en los puertos 500[1-3] como se indica en el diagrama de la Figura 2. Cada hilo será marcado con un DSCP distinto en S2. Se crearán colas para establecer rate limits máximos distintos para cada hilo de comunicacion en S1 a través del API del controlador en runtime. Se intercambian los rate limits con el API para invertir los rate limits también en runtime. 
+
 ![Figura 2](doc/pyconar-qos.png)
+
+Inicializar controlador
+```
+python3 ./bin/ryu-manager --observe-links ryu.app.rest_topology ryu.app.ws_topology ryu.app.ofctl_rest ryu.app.qos_simple_switch_13  ryu.app.rest_conf_switch ryu.app.rest_qos ryu.app.gui_topology.gui_topology
+```
+
+Inicializar script
+```
+cd src/mininet
+python sdn-simulation.py
+```
+
+![Figura 3](doc/simulacion-qos.png)
 
 ### Referencias
 - http://mininet.org/

@@ -2,8 +2,8 @@ import os
 import json
 from  time import sleep
 
-from .loggerService import loggerService
-from .api import ApiService
+from loggerService import loggerService
+from api import ApiService
 
 class Simulation:
     SIMULATION_TIME = 20
@@ -49,7 +49,7 @@ class Simulation:
         api = self.api
 
         # Reglas DSCP
-        endpoint = QOS_RULES + datapath
+        endpoint = self.QOS_RULES + datapath
         rules = [{"match": {"nw_dst": "10.0.0.1", "nw_proto": "UDP", "tp_dst": "5001"}, "actions": {"mark": "26"}},
                  {"match": {"nw_dst": "10.0.0.1", "nw_proto": "UDP", "tp_dst": "5002"}, "actions": {"mark": "10"}},
                  {"match": {"nw_dst": "10.0.0.1", "nw_proto": "UDP", "tp_dst": "5003"}, "actions": {"mark": "12"}}
@@ -61,7 +61,7 @@ class Simulation:
 
     # iperfTest simulate best effort traffic between hosts
     def iperfTest(self, hosts, testPorts, time):
-        loggerService.debug("Inicializar simulación de tráfico con IPerf")
+        loggerService.debug("Inicializar simulacion de trafico con IPerf")
         server = hosts[0]
         client = hosts[1]
 
@@ -87,8 +87,8 @@ class Simulation:
         '''
 
         datapath = self.switch_query(switch)
-        endpoint = OVSDB_CONF + datapath + '/ovsdb_addr'
-        api.put(endpoint, OVSDB_SERVER)
+        endpoint = self.OVSDB_CONF + datapath + '/ovsdb_addr'
+        self.api.put(endpoint, self.OVSDB_SERVER)
         sleep(2)
 
         # Post Queue
@@ -104,7 +104,7 @@ class Simulation:
                         {"min_rate": "800000"}]
             }
 
-            api.post(queueEndpoint, queueData)
+            self.api.post(queueEndpoint, queueData)
         else:
             queueEndpoint = '/qos/queue/' + datapath
             queueData = {
@@ -116,9 +116,9 @@ class Simulation:
                         {"max_rate": "100000"},
                         {"min_rate": "800000"}]
             }
-            api.post(queueEndpoint, queueData)
+            self.api.post(queueEndpoint, queueData)
 
-        endpoint = QOS_RULES + datapath
+        endpoint = self.QOS_RULES + datapath
         
         rules = [{"match": {"ip_dscp": "26"}, "actions":{"queue": "0"}},
                  {"match": {"ip_dscp": "10"}, "actions":{"queue": "1"}},
@@ -127,6 +127,6 @@ class Simulation:
         
         for rule in rules:
             try:
-                api.post(endpoint, rule)
+                self.api.post(endpoint, rule)
             except Exception as e:
                 loggerService.error('Error configurando reglas qos en controlador')

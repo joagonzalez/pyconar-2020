@@ -10,9 +10,10 @@ class LoggerService:
     def createLogger(self):
          logging.basicConfig(level=logging.DEBUG, format= '%(asctime)s - %(name)s - %(levelname)s - %(process)s - %(message)s')
          logger = logging.getLogger( __name__ )
+         return logger
 
     def getLogger(self):
-        return self.loggerService
+        return self.logger
 
     def debug(self, message):
         return self.loggerService.debug(message)

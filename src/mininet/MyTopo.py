@@ -3,7 +3,7 @@ from mininet.topo import Topo
 
 class MyTopo( Topo ):
     '''
-    Clase para definir topología a desplegar con Mininet
+    Clase para definir topologia a desplegar con Mininet
     '''
 
 

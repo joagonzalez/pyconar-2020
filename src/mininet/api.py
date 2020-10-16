@@ -1,6 +1,10 @@
 import json
 import pycurl
-from StringIO import StringIO
+try:
+    from StringIO import StringIO ## for Python 2
+except ImportError:
+    from io import StringIO ## for Python 3
+# from StringIO import StringIO
 
 try:
     # python 3
@@ -39,7 +43,7 @@ class ApiService:
     self.request.setopt(self.http.POSTFIELDS, data)
     self.request.setopt(self.http.VERBOSE, True)
     return self.perform()
-
+    
   def put(self, endpoint='', data={}):
     data = json.dumps(data)
     self.initRequest(endpoint)

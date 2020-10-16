@@ -3,10 +3,10 @@ Simulacion QoS Mininet
 '''
 
 from  time import sleep
-from .loggerService import loggerService
+from loggerService import loggerService
 
 from MyTopo import MyTopo
-from .Simulation import Simulation
+from Simulation import Simulation
 
 from mininet.node import Node, Controller, RemoteController
 from mininet.net import Mininet
@@ -43,7 +43,7 @@ def run():
     h1.cmdPrint('wireshark &')
     sleep(5)
 
-    # Comenzamos simulación
+    # Comenzamos simulacion
     loggerService.info( '*** Configuramos DSCP tags...' )
     simulation.dscp_mark(2)   
     loggerService.info( '*** Configuramos QOS queues...' )
