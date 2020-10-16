@@ -8,6 +8,9 @@
 ![Python](https://img.shields.io/badge/python-v3.6-blue)
 ![Python](https://img.shields.io/badge/platform-linux--64-lightgrey)
 
+![Figura 1](doc/pyconar.png)
+
+
 **Abstract:**
 Las redes definidas por software (SDN) vienen a cambiar la forma en la que pensamos como las aplicaciones se vinculan con las redes sobre las que funcionan. En esta charla intentaré dar una breve introducción a la arquitectura y protocolos propuestos por SDN y como desarrollar nuevas funcionalidades de red usando un framework/controlador hecho en Python.
 
@@ -57,7 +60,7 @@ mininet/util/install.sh [options]
 ### Ejemplos
 
 #### Switch L2
-![Figura 1](doc/topologia.png)
+![Figura 2](doc/topologia.png)
 
 Inicializar Mininet
 ```
@@ -82,7 +85,7 @@ python3 ./bin/ryu-manager --observe-links ryu.app.rest_topology ryu.app.ws_topol
 #### Calidad de servicio
 Se simularan 3 hilos de comunicación desde H2 (client) y hacia H1 (server) con IPerf en los puertos 500[1-3] como se indica en el diagrama de la Figura 2. Cada hilo será marcado con un DSCP distinto en S2. Se crearán colas para establecer rate limits máximos distintos para cada hilo de comunicacion en S1 a través del API del controlador en runtime. Se intercambian los rate limits con el API para invertir los rate limits también en runtime. 
 
-![Figura 2](doc/pyconar-qos.png)
+![Figura 3](doc/pyconar-qos.png)
 
 Inicializar controlador
 ```
@@ -95,7 +98,7 @@ cd src/mininet
 python sdn-simulation.py
 ```
 
-![Figura 3](doc/simulacion-qos.png)
+![Figura 4](doc/simulacion-qos.png)
 
 ### Referencias
 - http://mininet.org/
