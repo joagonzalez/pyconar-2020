@@ -6,7 +6,7 @@ from loggerService import loggerService
 from api import ApiService
 
 class Simulation:
-    SIMULATION_TIME = 20
+    SIMULATION_TIME = 5
     QOS_RULES = '/qos/rules/'
     QOS_QUEUES = '/qos/queues/'
     OVSDB_CONF = '/v1.0/conf/switches/'

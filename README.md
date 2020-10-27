@@ -63,6 +63,7 @@ mininet/util/install.sh [options]
 
 Inicializar Mininet
 ```
+sudo mn --topo=linear,1,3 --mac --switch ovsk --controller remote
 sudo mn --topo=linear,3,1 --mac --switch ovsk --controller remote
 sudo mn --topo=tree,3,3 --mac --switch ovsk --controller remote
 ```
